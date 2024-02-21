@@ -7,6 +7,8 @@ restaurantes = [{'nome': 'Praça', 'categoria': 'Japonesa', 'ativo': False},
 
 
 def exibir_nome_do_programa():
+    ''' Essa função é repsponsável por imprimir o nome do programa
+    '''
     print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
@@ -18,6 +20,8 @@ def exibir_nome_do_programa():
 
 
 def exibir_opcoes():
+    ''' Essa função é repsponsável por imprimir as opções da lista
+    '''
     print('1. Cadastrar restaurante')
     print('2. Listar restaurante')
     print('3. Alternar estado do restaurante')
@@ -25,20 +29,34 @@ def exibir_opcoes():
 
 
 def finalizar_app():
+    ''' Essa função é repsponsável por encerrar o programa
+    '''
     exibir_subtitulo('Finalizando o app\n')
 
 
 def voltar_ao_menu_principal():
+    ''' 
+    Essa função é responsável por solicitar ao usuário que pressione uma tecla para voltar ao menu principal.
+    '''
     input('\nDigite uma tecla para voltar ao menu principal ')
     main()
 
 
 def opcao_invalida():
+    ''' 
+    Essa função é responsável por imprimir uma mensagem de opção inválida e chamar a função voltar_ao_menu_principal() para o usuário tentar selecionar uma opção novamente.
+    '''
     print('Opção inválida!\n')
     voltar_ao_menu_principal()
 
 
 def exibir_subtitulo(texto):
+    ''' 
+    Essa função é responsável por imprimir um subtitulo com um texto.
+    
+    Inputs:
+        texto (str): O texto do subtitulo.
+    '''
     os.system('cls')
     linha = '*' * (len(texto))
     print(linha)
@@ -67,6 +85,9 @@ def cadastrar_novo_restaurante():
 
 
 def listar_restaurantes():
+    ''' 
+    Essa função é responsável por listar os restaurantes.
+    '''
     exibir_subtitulo('Listando os restaurantes')
 
     print(f'{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status')
@@ -80,6 +101,9 @@ def listar_restaurantes():
 
 
 def alterar_estado_restaurante():
+    ''' 
+    Essa função é responsável por alterar o estado de um restaurante (ativo/desativado).
+    '''
     exibir_subtitulo("Alterando estado do restaurante")
 
     nome_restaurante = input('Digine o nome do restaurante que deseja alterar o estado: ')
@@ -99,6 +123,9 @@ def alterar_estado_restaurante():
 
 
 def escolher_opcao():
+    ''' 
+    Essa função é responsável por permitir ao usuário escolher uma opção do menu.
+    '''
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         print(f"Você escolheu a opção', {opcao_escolhida}")
