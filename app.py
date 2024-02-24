@@ -6,7 +6,7 @@ restaurante_praca.receber_avaliacao('Lais', 8)
 restaurante_praca.receber_avaliacao('Emy', 5)
 
 
-restaurante_mexicano.alternar_estado()
+
 
 
 def main():
