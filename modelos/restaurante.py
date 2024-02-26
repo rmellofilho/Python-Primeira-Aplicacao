@@ -40,6 +40,7 @@ class Restaurante:
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
 
+
     def adicionar_bebida_no_cardapio(self, bebida):
         self._cardapio.append(bebida)
     
